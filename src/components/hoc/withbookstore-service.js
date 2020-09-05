@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { BookstoreServiceConsumer} from '../bookstoreservice-context';
 
 const withBookstoreService = () => (Wrapped) => {
@@ -6,16 +6,15 @@ const withBookstoreService = () => (Wrapped) => {
     return (props) => {
         return (
             <BookstoreServiceConsumer>
-                {
+            {
                 (bookstoreService) => {
-                    return (
-                    <Wrapped {...props} bookstoreService={bookstoreService}/>
-                    )
+                    return (<Wrapped {...props}
+                         bookstoreService={bookstoreService}/>);    
                 }
-                }
+            }
             </BookstoreServiceConsumer>
         )
     }
-}
+};
 
 export default withBookstoreService;

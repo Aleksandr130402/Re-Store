@@ -21,8 +21,6 @@ ReactDOM.render(
         <Router>
           <App/>
         </Router>
-          
-        
       </BookstoreServiceProvider>
     </ErrorBoundary>
   </Provider>
