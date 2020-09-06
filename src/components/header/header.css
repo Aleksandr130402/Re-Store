@@ -1,13 +1,24 @@
 .header {
-    margin-left: 20px;
-    flex-direction: row;
+    border-bottom: 1px solid #7F7F7F;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.header-list {
-    margin-left: 120px;
+.header .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    padding-left: 1rem;
 }
 
-.header-list li {
-    list-style: none;
-    margin-left: 15px;
+.header .shopping-cart {
+    align-self: center;
+    font-size: 1.3rem;
+    padding-right: 1rem;
+}
+
+.header .shopping-cart .cart-icon {
+    font-size: 2.2rem;
+    color: #000;
+    margin-right: 10px;
 }

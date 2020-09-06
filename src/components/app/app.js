@@ -8,11 +8,11 @@ const App = () => {
     
     return (
 
-        <div>
-            <main role="main" className="container">
+        <div className="container">
             
-            <Header/>
-            
+            <Header numItems={1} total={217}/>
+
+            <main role="main">
                 <Switch>
                 <Route path="/" component={HomePage} exact/>
                 <Route path="/card" component={CardPage}/>

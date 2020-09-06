@@ -17,4 +17,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-bottom: 10px;
+    align-items: flex-start;
+}
+
+.book-list-item .book-details .book-title{
+    font-size: 1.2rem;
+}
+
+.book-list-item .book-details .book-price{
+    font-size: 1.4rem;
 }

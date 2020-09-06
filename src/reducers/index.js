@@ -1,28 +1,29 @@
 let initialState = {
-    books: [
-        {
-            id: 1,
-            title: 'Production-Ready Microservices',
-            author: 'Susan J. Fowler',
-            price: 32,
-            coverImage: "https://images-na.ssl-images-amazon.com/images/I/41yJ75gpV-L._SX381_B01,204,203_.jpg"
-            },
-            {
-            id: 2,
-            title: 'Release it',
-            author: 'Michael T. Nygard',
-            price: 40,
-            coverImage: "https://images-na.ssl-images-amazon.com/images/I/414CRjLjwgL._SX403_BO1,204,203,200_.jpg"
-            }
-    ]
+    books: [],
+    loading: true,
+    error: null
 };
 
 const reducer = (state = initialState, action) => {
-    switch(action.type) {
-        case 'BOOK_LOADED':
+    switch (action.type) {
+        case 'BOOKS_REQUESTED':
             return {
-                books: action.payload
+                books: [],
+                loading: true,
+                error: null
             };
+        case 'BOOKS_LOADED':
+            return {
+                books: action.payload,
+                loading: false,
+                error: null
+            };
+        case 'BOOKS_ERROR':
+            return {
+                books: [],
+                loading: false,
+                error: action.payload
+            }
         default: 
             return state;
     }

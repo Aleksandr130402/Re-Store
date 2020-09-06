@@ -24,7 +24,6 @@ ReactDOM.render(
       </BookstoreServiceProvider>
     </ErrorBoundary>
   </Provider>
-          
-        ,
+ ,
   document.getElementById('root')
 );
